@@ -4,7 +4,6 @@ import { generateIdeaFromAI } from "./openai";
 import { motion } from "framer-motion";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import axios from 'axios';
 
 export default function App() {
   const [idea, setIdea] = useState("");
