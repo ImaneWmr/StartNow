@@ -1,0 +1,12 @@
+# Ignorer les fichiers .env
+.env
+
+# Ignorer les dossiers node_modules (générés par npm)
+node_modules/
+
+# Ignorer les fichiers log
+*.log
+
+# Ignorer les dossiers de build et dist
+build/
+dist/
