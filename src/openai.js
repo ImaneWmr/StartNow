@@ -4,8 +4,11 @@ const API_KEY =process.env.REACT_APP_OPENAI_API_KEY;
 
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 // A RETENIR : ce modèle is the one -> gemini-1.5-flash
-export const generateIdeaFromAI = async () => {
+export const generateIdeaFromAI = async (secteur) => {
+  console.log(`Le secteur est ${secteur}`);
   try {
+    
+
     const response = await axios.post(
       API_URL,
       {
@@ -13,7 +16,7 @@ export const generateIdeaFromAI = async () => {
           {
             parts: [
               {
-                text: "Donne-moi une idée de startup innovante et originale."
+                text: `Donne-moi une idée de startup innovante et originale dans le secteur ${secteur}.`
               }
             ]
           }
